@@ -48,13 +48,18 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    padding: 40px;
-    gap: 15px;
+    height: 80vh;
+/*     padding: 40px; */
 }
 
 
 section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 30vw;
+
+  
 }
 
 section a {
@@ -70,6 +75,72 @@ img {
 h1{
     color: white;
 }
+
+
+/* presentation-album */
+#presentation-album div {
+    width: 70%;
+    height: auto;
+}
+
+#presentation-album div h1,
+#presentation-album div h2,
+#presentation-album div h4,
+#presentation-album div img {
+    width: 100%;
+    height: auto;
+}
+
+#presentation-album h2,
+#spotify h2{
+    color:#cbd0c4;
+}
+
+
+/* TITRES  */
+
+
+.carte-flip {
+    perspective: 2000px;
+}
+
+.carte-interieur {
+    position: relative;
+    height: 600px;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.carte-flip:hover .carte-interieur {
+    transform: rotateY(180deg);
+}
+
+.recto,
+.verso {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recto {
+    background-color: #cbd0c4;
+}
+
+.verso {
+    transform: rotateY(180deg);
+    background-color: #78866b;
+    color: white;
+}
+
+.verso li {
+    margin-bottom: 8px;
+}
+
+/* FOOTER */
 
 footer {
     display: flex;
@@ -97,6 +168,13 @@ ol{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1;
-    margin-top: 30px;
+}
+
+/* SPOTIFY */
+
+
+#spotify div{
+    display: flex;
+    gap: 30px;
+    width: 70%;
 }
